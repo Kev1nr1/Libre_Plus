@@ -24,4 +24,6 @@ def get_libre_data():
 
 # Fetch and print the data
 libre_data = get_libre_data()
-print("Libre Data:", libre_data)
+dict_libre_data = dict(libre_data)
+glucose = dict_libre_data['current']
+print(glucose)
