@@ -1,6 +1,7 @@
 import subprocess
 import json
 
+#Return the full Libre data
 def get_libre_data():
     # Run the Node.js script and capture the output
     result = subprocess.run(
@@ -22,8 +23,10 @@ def get_libre_data():
         print("Failed to parse JSON:", result.stdout)
         return None
 
-# Fetch and print the data
-libre_data = get_libre_data()
-dict_libre_data = dict(libre_data)
-glucose = dict_libre_data['current']
-print(glucose)
+
+# Only return the current glucose value
+def get_current_glucose():
+    data = get_libre_data()
+    dict_libre_data = dict(data)
+    current_glucose = dict_libre_data['current']
+    return current_glucose
