@@ -1,6 +1,7 @@
 {
   "name": "@diakem/libre-link-up-api-client",
   "version": "0.7.1",
+  "type": "module",
   "description": "Libre Link Up client to retrieve cgm data directly from sharing service",
   "publishConfig": {
     "access": "public"
@@ -55,6 +56,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@diakem/libre-link-up-api-client": "^0.7.1",
     "axios": "^0.27.2"
   }
 }
